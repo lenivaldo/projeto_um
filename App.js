@@ -3,7 +3,17 @@ import { StyleSheet, Text, View } from 'react-native';
 //import OlaMundo from './componentes/OlaMundo';
 import DimensoesFixas from './componentes/DimensoesFixas';
 
-
+/*
+// 4 - Criando os primeiros componentes
+// 5 - Estilizando componentes
+// 6 - Layouts com Flexbox
+// 7 - Renderização condicional
+// 8 - State, eventos e componentes controlados e não controlados
+// 9 - Requisições AJAX e API's
+// 10- Navegação
+// 11- Banco de dados Firebase
+// 12- Hooks
+*/
 export default function App() {
   return (
 
