@@ -14,9 +14,9 @@ class DimensoesFixas extends React.Component{
         return(
             <View style={{width: '100%', height: '100%', flexDirection: 'column',
             justifyContent: 'center', alignItems: 'stretch'}}>
-                <View style={{height: 50, backgroundColor: 'powderblue'}}/>
-                <View style={{height: 50, backgroundColor: 'skyblue'}}/>
-                <View style={{height: 50, backgroundColor: 'steelblue'}}/>
+                <View style={{flexGrow: 1, backgroundColor: 'powderblue'}}/>
+                <View style={{flexGrow: 2, backgroundColor: 'skyblue'}}/>
+                <View style={{flexGrow: 3, backgroundColor: 'steelblue'}}/>
             </View>
         );
     }
