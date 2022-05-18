@@ -1,16 +1,18 @@
 import React from "react";
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default props => {
     return (
         <View style={estilos.container}>
-        {
-            props.numero % 2 == 0
-            ? <Text style={estilos.texto}>O número é par!</Text>
-            : <Text style={estilos.texto}>O número é ímpar!</Text>
-        }
+            {validaParOuImpar(props.numero)}
         </View>
     )
+}
+
+function validaParOuImpar(numero) {
+    return numero % 2 == 0
+    ? <Text style={estilos.texto}>O número é par!</Text>
+    : <Text style={estilos.texto}>O número é ímpar!</Text>
 }
 
 

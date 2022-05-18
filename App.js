@@ -18,7 +18,7 @@ import ChecaNumero from './componentes/ChecaNumero';
 export default function App() {
   return (
 
-    <ChecaNumero numero={6}/>
+    <ChecaNumero numero={47}/>
 
     /*
     <View>
