@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 //import OlaMundo from './componentes/OlaMundo';
-import DimensoesFixas from './componentes/DimensoesFixas';
+//import DimensoesFixas from './componentes/DimensoesFixas';
 import ChecaNumero from './componentes/ChecaNumero';
+import Evento from './componentes/Evento';
 
 /*
 // 4 - Criando os primeiros componentes
@@ -18,9 +19,11 @@ import ChecaNumero from './componentes/ChecaNumero';
 export default function App() {
   return (
 
-    <ChecaNumero numero={47}/>
+    <Evento/>
 
     /*
+    <ChecaNumero numero={47}/>
+
     <View>
     <DimensoesFixas/>
     <StatusBar style='auto'/>
@@ -29,8 +32,7 @@ export default function App() {
     <View style={styles.container}>
       <OlaMundo nome='Leitor'/>
       <StatusBar style='auto'/>
-    </View>
-    
+    </View>    
     
     <View style={styles.container}>
       <Text>Iniciando a revisão dos estudos de React Native!</Text>
