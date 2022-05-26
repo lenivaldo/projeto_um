@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 //import DimensoesFixas from './componentes/DimensoesFixas';
 import ChecaNumero from './componentes/ChecaNumero';
 import Evento from './componentes/Evento';
+import UsuarioGithub from './componentes/UsuarioGithub';
 
 /*
 // 4 - Criando os primeiros componentes
@@ -19,9 +20,12 @@ import Evento from './componentes/Evento';
 export default function App() {
   return (
 
-    <Evento/>
+    <UsuarioGithub />
 
     /*
+
+    <Evento/>
+    
     <ChecaNumero numero={47}/>
 
     <View>
