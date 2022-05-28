@@ -11,6 +11,7 @@ class UsuarioGithub extends React.Component {
         }
 
         this.fetchDados = this.fetchDados.bind(this);
+        this.formaDadosDoUsuario = this.formaDadosDoUsuario.bind(this);
     }
 
     fetchDados() {
@@ -20,16 +21,38 @@ class UsuarioGithub extends React.Component {
             .catch(err => this.setState({ dados: { err } }))
     }
 
+    formaDadosDoUsuario() {
+        if (this.state.dados.name !== undefined) {
+            const {name, public_repos, followers} = this.state.dados;
+            return (
+                <>
+                <Text style={estilos.font30}>Dados do usuário</Text>
+                <Text>Nome: {name}</Text>
+                <Text>Repositórios: {public_repos}</Text>
+                <Text>Seguidores: {followers}</Text>
+                </>
+            )
+        } else {
+            return (
+                <Text style={estilos.font30}>
+                    Este usuário não existe!
+                </Text>
+            )
+        }
+    }
+
     componentDidMount() {
         this.fetchDados();
     }
 
     render() {
+        const { name, public_repos, followers } = this.state.dados;
         return (
             <View style={estilos.container}>
-                <Text>{JSON.stringify(this.state.dados)}</Text>
+                {this.formaDadosDoUsuario()}                
                 <View>
                     <TextInput
+                        style={estilos.input}
                         onChangeText={usuario => this.setState({ usuario })}
                         value={this.state.usuario}
                     >
@@ -53,6 +76,18 @@ const estilos = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    input: {
+        height: 50,
+        width: 300,
+        fontSize: 30,
+        borderWidth: 1,
+        borderColor: 'black',
+        margin: 10,
+        padding: 5
+    },
+    font30: {
+        fontSize: 30
     }
 })
 

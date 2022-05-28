@@ -20,11 +20,13 @@ import UsuarioGithub from './componentes/UsuarioGithub';
 export default function App() {
   return (
 
-    <UsuarioGithub />
+    <UsuarioGithub/>
+    
 
     /*
-
     <Evento/>
+    
+    <UsuarioGithub/>    
     
     <ChecaNumero numero={47}/>
 
