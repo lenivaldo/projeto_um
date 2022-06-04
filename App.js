@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 //import OlaMundo from './componentes/OlaMundo';
 //import DimensoesFixas from './componentes/DimensoesFixas';
 import ChecaNumero from './componentes/ChecaNumero';
@@ -17,24 +19,29 @@ import UsuarioGithub from './componentes/UsuarioGithub';
 // 11- Banco de dados Firebase
 // 12- Hooks
 */
+
+const Drawer = createAppContainer();
+
 export default function App() {
   return (
 
-    <UsuarioGithub/>
+    <NavigationContainer>
+      <Drawer.Navigator>
+        <Drawer.Screen name="Evento" component={Evento}/>
+        <Drawer.Screen name="Github" component={UsuarioGithub}/>        
+      </Drawer.Navigator>
+    </NavigationContainer>
     
-
     /*
     <Evento/>
     
     <UsuarioGithub/>    
     
     <ChecaNumero numero={47}/>
-
     <View>
     <DimensoesFixas/>
     <StatusBar style='auto'/>
     </View>
-
     <View style={styles.container}>
       <OlaMundo nome='Leitor'/>
       <StatusBar style='auto'/>
@@ -56,4 +63,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
